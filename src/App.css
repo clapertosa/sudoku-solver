@@ -1,38 +1,64 @@
-.App {
-  text-align: center;
+* {
+    background-color: dimgray;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.cell {
+    /*display: flex;*/
+    justify-content: center;
+    align-content: center;
+    width: 20px;
+    height: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.cell-input {
+    border: none;
+    width: 20px;
+    height: 20px;
+    text-align: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.black-border {
+    border: 1px solid black;
 }
 
-.App-link {
-  color: #61dafb;
+[id$="-0"] {
+    border-left-style: solid;
+    border-left-width: 3px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+[id^="0-"] {
+    border-top-style: solid;
+    border-top-width: 3px;
+}
+
+[id$="-8"] {
+    border-right-style: solid;
+    border-right-width: 3px;
+}
+
+[id^="8-"] {
+    border-bottom-style: solid;
+    border-bottom-width: 3px;
+}
+
+/* Internal */
+
+[id^="2-"], [id^="5-"] {
+    border-bottom-style: solid;
+    border-bottom-width: 3px;
+}
+
+[id$="-2"], [id$="-5"] {
+    border-right-style: solid;
+    border-right-width: 3px;
+}
+
+[id^="3-"], [id^="6-"] {
+    border-top-style: solid;
+    border-top-width: 3px;
+}
+
+[id$="-3"], [id$="-6"] {
+    border-left-style: solid;
+    border-left-width: 3px;
 }
